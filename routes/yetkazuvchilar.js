@@ -4,12 +4,12 @@ const yetkazuvchilarController = require("../controllers/yetkazuvchilar");
 
 router.get("/", yetkazuvchilarController.getAllyetkazuvchilar);
 
-router.post("/", restoransController.Createyetkazuvchilar);
+router.post("/", yetkazuvchilarController.getAllyetkazuvchilar);
 
-router.get("/:id", restoransController.GetyetkazuvchilarById);
+router.get("/:id", yetkazuvchilarController.GetyetkazuvchilarById);
 
-router.put("/:id", restoransController.Updateyetkazuvchilar);
+router.put("/:id", yetkazuvchilarController.Updateyetkazuvchilar);
 
-router.delete("/:id", restoransController.Deleteyetkazuvchilar);
+router.delete("/:id", yetkazuvchilarController.Deleteyetkazuvchilar);
 
 module.exports = router;
