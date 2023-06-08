@@ -14,7 +14,7 @@ exports.getAllbuyurtmalar = (req, res) => {
 exports.Createbuyurtmalar = (req, res) => {
   const { menyu_id, mijozlar_id, yetkazuvchilar_id, quantity } = req.body;
   db.query(
-    "INSERT INTO district(menyu_id, mijozlar_id, yetkazuvchilar_id, quantity) VALUES(?,?,?,?)",
+    "INSERT INTO buyurtmalar(menyu_id, mijozlar_id, yetkazuvchilar_id, quantity) VALUES(?,?,?,?)",
     [menyu_id, mijozlar_id, yetkazuvchilar_id, quantity],
     (error, results) => {
       if (error) {
@@ -51,7 +51,7 @@ exports.Updatebuyurtmalar = (req, res) => {
   const buyurtmalarId = req.params.id;
   const { menyu_id, mijozlar_id, yetkazuvchilar_id, quantity } = req.body;
   db.query(
-    "UPDATE district set menyu_id =?, mijozlar_id=?, yetkazuvchilar_id=?, quantity=?  where id = ?",
+    "UPDATE buyurtmalar set menyu_id =?, mijozlar_id=?, yetkazuvchilar_id=?, quantity=?  where id = ?",
     [menyu_id, mijozlar_id, yetkazuvchilar_id, quantity, buyurtmalarId],
     (error) => {
       if (error) {

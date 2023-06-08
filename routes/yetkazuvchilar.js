@@ -4,7 +4,7 @@ const yetkazuvchilarController = require("../controllers/yetkazuvchilar");
 
 router.get("/", yetkazuvchilarController.getAllyetkazuvchilar);
 
-router.post("/", yetkazuvchilarController.getAllyetkazuvchilar);
+router.post("/", yetkazuvchilarController.Createyetkazuvchilar);
 
 router.get("/:id", yetkazuvchilarController.GetyetkazuvchilarById);
 

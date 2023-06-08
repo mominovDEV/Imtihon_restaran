@@ -14,7 +14,7 @@ exports.getAllovqatlar = (req, res) => {
 exports.Createovqatlar = (req, res) => {
   const { name } = req.body;
   db.query(
-    "INSERT INTO district(name ) VALUES(?)",
+    "INSERT INTO ovqatlar(name ) VALUES(?)",
     [name],
     (error, results) => {
       if (error) {
@@ -51,7 +51,7 @@ exports.Updateovqatlar = (req, res) => {
   const ovqatlarId = req.params.id;
   const { name } = req.body;
   db.query(
-    "UPDATE ovqatlar set name=?, phone=?, location=?   where id = ?",
+    "UPDATE ovqatlar set name=?  where id = ?",
     [name, ovqatlarId],
     (error) => {
       if (error) {

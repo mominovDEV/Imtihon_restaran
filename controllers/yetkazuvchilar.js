@@ -14,7 +14,7 @@ exports.getAllyetkazuvchilar = (req, res) => {
 exports.Createyetkazuvchilar = (req, res) => {
   const { name, phone } = req.body;
   db.query(
-    "INSERT INTO restarans(name, phone ) VALUES(?,?)",
+    "INSERT INTO yetkazuvchilar(name, phone ) VALUES(?,?)",
     [name, phone],
     (error, results) => {
       if (error) {

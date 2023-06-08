@@ -14,7 +14,7 @@ exports.getAllmijozlar = (req, res) => {
 exports.Createmijozlar = (req, res) => {
   const { name, phone, location } = req.body;
   db.query(
-    "INSERT INTO district(name, phone, location ) VALUES(?,?,?)",
+    "INSERT INTO mijozlar(name, phone, location ) VALUES(?,?,?)",
     [name, phone, location],
     (error, results) => {
       if (error) {
